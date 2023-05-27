@@ -77,9 +77,8 @@ func GetDataServers() (dataServersSlice []string) {
 	return
 }
 
-//随机返回多个活跃的数据节点
-//n表示我们需要多少个随机数据节点
-//exclude作用是要求返回的节点中不能包含map中的节点，因为数据修复的时候需要排除掉已有的分片所在的节点
+// ChooseRandomDataServer 随机返回多个活跃的数据节点
+// n表示我们需要多少个随机数据节点 ,exclude作用是要求返回的节点中不能包含map中的节点，因为数据修复的时候需要排除掉已有的分片所在的节点
 func ChooseRandomDataServer(n int, exclude map[int]string) (ds []string, err error) {
 	//候选数组
 	candidates := make([]string, 0)
