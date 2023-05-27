@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//开始发送心跳包
+// StartHeartbeat 开始发送心跳包
 func StartHeartbeat() {
 	rdb := RedisMQ.Rds
 

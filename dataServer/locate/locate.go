@@ -25,7 +25,7 @@ import (
 	"strings"
 )
 
-//第一次启动时，将所有对象存储到map
+// CollectObjects 第一次启动时，将所有对象存储到map
 func CollectObjects() {
 	//读取$STORAGE_ROOT/objects/目录里的所有文件
 	files, _ := filepath.Glob(os.Getenv("STORAGE_ROOT") + "/objects/*")
